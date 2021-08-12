@@ -10,7 +10,6 @@ public class RedisHandler {
     private static String password="password123";
 
     public static byte[] getRedisData(String key){
-
         Jedis jedis  = new Jedis(ipAddress, 16379);
         try{
 		    jedis.auth(password);

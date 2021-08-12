@@ -1,4 +1,6 @@
 helpers\DataGenerator.class
 automationHaud\AutomationHaudTest.class
+helpers\PcapValidation$1.class
 helpers\DbHandler.class
 helpers\RedisHandler.class
+helpers\PcapValidation.class
