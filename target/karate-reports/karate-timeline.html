@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"com.intuit.karate.cli.Main.main()","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/automationHaud\/feature\/sendSmppSMS[1:7]","start":1628739565476,"end":1628739568257,"title":"src\/test\/java\/automationHaud\/feature\/sendSmppSMS[1:7] 09:09:25.476-09:09:28.257 Create SMPP Server"},{"id":2,"group":1,"content":"src\/test\/java\/automationHaud\/feature\/sendSmppSMS[2:22]","start":1628739568268,"end":1628739568760,"title":"src\/test\/java\/automationHaud\/feature\/sendSmppSMS[2:22] 09:09:28.268-09:09:28.760 Configure SMPP Server"},{"id":3,"group":1,"content":"src\/test\/java\/automationHaud\/feature\/sendSmppSMS[3:41]","start":1628739568770,"end":1628739569296,"title":"src\/test\/java\/automationHaud\/feature\/sendSmppSMS[3:41] 09:09:28.770-09:09:29.296 Create SMPP Client"},{"id":4,"group":1,"content":"src\/test\/java\/automationHaud\/feature\/sendSmppSMS[4:56]","start":1628739569303,"end":1628739569726,"title":"src\/test\/java\/automationHaud\/feature\/sendSmppSMS[4:56] 09:09:29.303-09:09:29.726 Configure SMPP Clinet"},{"id":5,"group":1,"content":"src\/test\/java\/automationHaud\/feature\/sendSmppSMS[5:76]","start":1628739569734,"end":1628739570492,"title":"src\/test\/java\/automationHaud\/feature\/sendSmppSMS[5:76] 09:09:29.734-09:09:30.492 Connect SMPP Clinet"},{"id":6,"group":1,"content":"src\/test\/java\/automationHaud\/feature\/sendSmppSMS[6:81]","start":1628739570498,"end":1628739571399,"title":"src\/test\/java\/automationHaud\/feature\/sendSmppSMS[6:81] 09:09:30.498-09:09:31.399 Create Connection Link"},{"id":7,"group":1,"content":"src\/test\/java\/automationHaud\/feature\/sendSmppSMS[7:87]","start":1628739571405,"end":1628739571828,"title":"src\/test\/java\/automationHaud\/feature\/sendSmppSMS[7:87] 09:09:31.405-09:09:31.828 Bind SMPP Request"},{"id":8,"group":1,"content":"src\/test\/java\/automationHaud\/feature\/sendSmppSMS[8:101]","start":1628739571835,"end":1628739572263,"title":"src\/test\/java\/automationHaud\/feature\/sendSmppSMS[8:101] 09:09:31.835-09:09:32.263 Create SMPP Batch"},{"id":9,"group":1,"content":"src\/test\/java\/automationHaud\/feature\/sendSmppSMS[9:107]","start":1628739572269,"end":1628739572693,"title":"src\/test\/java\/automationHaud\/feature\/sendSmppSMS[9:107] 09:09:32.269-09:09:32.693 Add Message to SMPP Batch"},{"id":10,"group":1,"content":"src\/test\/java\/automationHaud\/feature\/sendSmppSMS[10:131]","start":1628739572699,"end":1628739573129,"title":"src\/test\/java\/automationHaud\/feature\/sendSmppSMS[10:131] 09:09:32.699-09:09:33.129 Submit SMPP Batch"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

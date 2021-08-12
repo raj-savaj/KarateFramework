@@ -1,0 +1,4 @@
+helpers\DataGenerator.class
+automationHaud\AutomationHaudTest.class
+helpers\DbHandler.class
+helpers\RedisHandler.class
